@@ -1,0 +1,24 @@
+datasources:
+  prometheus.yaml:
+    apiVersion: 1
+    datasources:
+      - name: Prometheus
+        type: prometheus
+        orgId: 1
+        editable: true
+        url: http://prometheus-server.monitoring.svc:80
+        version: 1
+
+# podAnnotations:
+  # prometheus.io/scrape: 'true'
+  # prometheus.io/path: /metrics
+  # prometheus.io/port: '3000'
+
+service:
+  type: NodePort
+  port: 3000
+  targetPort: 3000
+  nodePort: 31000
+  annotations:
+    prometheus.io/scrape: 'true'
+    prometheus.io/port: '3000'

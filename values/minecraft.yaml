@@ -1,0 +1,16 @@
+resources:
+  requests:
+    memory: 2Gi
+    cpu: 2
+
+minecraftServer:
+  eula: "TRUE"
+  gameMode: creative
+  difficulty: peaceful
+  memory: 2048M
+  serviceType: LoadBalancer
+  servicePort: 25565
+
+livenessProbe:
+  # This thing just takes forever to launch
+  initialDelaySeconds: 300
