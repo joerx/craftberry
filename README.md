@@ -1,2 +1,2 @@
 # craftberry
-Minecraft server on a Pi using k3s
+Minecraft server on a Pi using k3s. Because why not?
