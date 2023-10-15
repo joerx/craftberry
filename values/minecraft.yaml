@@ -1,6 +1,6 @@
 resources:
   requests:
-    memory: 2Gi
+    memory: 2560Mi
     cpu: 2
 
 minecraftServer:
