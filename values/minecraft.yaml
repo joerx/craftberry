@@ -11,6 +11,11 @@ minecraftServer:
   serviceType: LoadBalancer
   servicePort: 25565
 
+persistence:
+  storageClass: local-path
+  dataDir:
+    enabled: true
+
 livenessProbe:
   # This thing just takes forever to launch
   initialDelaySeconds: 300
